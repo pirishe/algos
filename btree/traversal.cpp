@@ -32,7 +32,7 @@ public:
         std::stack<TreeNode *> sNodes;
         std::stack<bool> sCanGoLeft;
         bool canGoLeft = true;
-        while(root || !sNodes.empty()) {
+        while (root || !sNodes.empty()) {
             if (root) {
                 if (canGoLeft) {
                     sNodes.push(root->right);

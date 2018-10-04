@@ -7,9 +7,9 @@ import java.util.Stack;
 
 class Solution {
     List<Character> preorderTraversal(TreeNode root) {
-        List<Character> ret = new ArrayList<Character> ();
+        List<Character> ret = new ArrayList<> ();
         Stack<TreeNode> s = new Stack<> ();
-        while(root != null || !s.empty()) {
+        while (root != null || !s.empty()) {
             if (root != null) {
                 ret.add(root.val);
                 s.push(root.right);
@@ -22,9 +22,9 @@ class Solution {
     }
 
     List<Character> inorderTraversal(TreeNode root) {
-        List<Character> ret = new ArrayList<Character> ();
+        List<Character> ret = new ArrayList<> ();
         Stack<TreeNode> s = new Stack<> ();
-        while(root != null || !s.empty()) {
+        while (root != null || !s.empty()) {
             if (root != null) {
                 s.push(root);
                 root = root.left;
@@ -42,7 +42,7 @@ class Solution {
         Stack<TreeNode> sNodes = new Stack<> ();
         Stack<Boolean> sCanGoLeft = new Stack<> ();
         boolean canGoLeft = true;
-        while(root != null || !sNodes.empty()) {
+        while (root != null || !sNodes.empty()) {
             if (root != null) {
                 if (canGoLeft) {
                     sNodes.push(root);
